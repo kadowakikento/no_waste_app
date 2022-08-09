@@ -5,13 +5,13 @@
 
 ## 就職Termの技術
 ---
-- device
-- rails_admin
-- cancancan
+- devise
+- Ajaxを使ったコメント機能
 
 ## カリキュラム外の技術
 ---
-- ransack
+- gem ransackを使った検索機能
+- gem rails_admin,gem cancancanを使った管理者機能
 
 ## 実行手順
 ---
@@ -34,7 +34,7 @@ https://docs.google.com/spreadsheets/d/1H3uUvVwSfoFoI5HPx0IREwurc0RERygDpin3F8bU
 
 ## ER図
 ---
-https://user-images.githubusercontent.com/105029510/183552668-39a18ac0-678e-4c7a-b9a4-4f6ffc107cbf.png
+https://user-images.githubusercontent.com/105029510/183577203-18ad569f-df4e-4484-bd21-7f995b1e61f7.png
 
 ## 画面遷移図
 ---
