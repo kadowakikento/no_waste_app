@@ -38,13 +38,9 @@ https://user-images.githubusercontent.com/105029510/183553060-c78f28ee-f738-42bf
 
 ## ER図
 ---
-https://user-images.githubusercontent.com/105029510/183665119-d4247653-dd92-46a2-ae9b-ab829edff455.png
-
-![picture 3](../images/d6a3f6a8c91ebe25eede0d053a91346aeeca5d7101fbffa5b5d3aebdd9cc89fe.png)  
+![卒業課題-ER図 drawio (2)](https://user-images.githubusercontent.com/105029510/183666736-e6f3eb55-45e2-4ca2-97a3-1c756a4d1671.png)
 
 
 ## 画面遷移図
 ---
-https://user-images.githubusercontent.com/105029510/183552824-3366678c-3f70-4ad6-88f4-00b59fd0019b.png
-
-![picture 2](../images/c0bb320dc2076f2ddd10695f765dd749594f8e87f29f64737b06ede67d57ee8e.png)  
+![卒業課題-ページ2 drawio (1)](https://user-images.githubusercontent.com/105029510/183667002-f90670a0-d4c4-4439-bd59-4ada97f53151.png)
