@@ -38,8 +38,7 @@ https://user-images.githubusercontent.com/105029510/183553060-c78f28ee-f738-42bf
 
 ## ER図
 ---
-![卒業課題-ER図 drawio (2)](https://user-images.githubusercontent.com/105029510/183666736-e6f3eb55-45e2-4ca2-97a3-1c756a4d1671.png)
-
+![卒業課題-ER図 drawio (4)](https://user-images.githubusercontent.com/105029510/183795246-5e4d1d21-c2a4-45ef-8e25-0b835a7fe2aa.png)
 
 ## 画面遷移図
 ---
