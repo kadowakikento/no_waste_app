@@ -41,8 +41,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1 or /articles/1.json
   def destroy
     @article.destroy
-      redirect_to articles_url, notice: "削除しました" 
-    end
+    redirect_to articles_url, notice: "削除しました" 
   end
 
   private
