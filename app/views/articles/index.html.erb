@@ -1,27 +1,16 @@
-<h1>Articles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.content %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<h2>No Waste</h2>
+<p>
+    毎日開けてる冷蔵庫
+    でもうっかりこの食材忘れてた
+    そんなことをなくすためのサイトです。
+  </p>
+  <% if user_signed_in? %>
+      <%= link_to "冷蔵庫一覧", foods_path, class: "btn btn-outline-info rounded-pill" %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill' %>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+    <h3>アプリ説明</h3>
+      <p>
+        冷蔵庫の今ある食材の中身を<br>
+        確認、管理できるサービスです。
+      </p>
