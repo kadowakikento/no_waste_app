@@ -17,13 +17,19 @@
     color: #5984dc;
   }
   .today {
-    background: #FFA0A0;
+    background: #FFFF99	;
   }
   .past {}
   .future {}
   .start-date {}
-  .prev-month {}
-  .next-month {}
+  .prev-month {
+    background: #808080;
+    color: #808080;
+  }
+  .next-month {
+    background-color: #808080;
+    color: #808080;
+  }
   .current-month {}
   .has-events {}
 }
