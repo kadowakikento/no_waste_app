@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   # get 'users/show'
   resources :shopping_lists
-  resources :foods
+  resources :foods do
+    collection do
+      get 'search'
+    end
+  end
   devise_for :users
   root 'articles#index' 
   resources :articles
