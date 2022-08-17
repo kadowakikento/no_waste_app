@@ -1,0 +1,18 @@
+<h1>アカウント編集</h1>
+<%= form_with(model: @user, local: true) do |f| %>  
+  
+
+  <%= f.label :メールアドレス %>
+  <%= f.email_field :email %>
+
+  <%= f.label :プロフィール写真 %>
+  <%= f.file_field :image %>
+
+  <%= f.label :パスワード %>
+  <%= f.password_field :password %>
+
+  <%= f.label :パスワード再確認 %>
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.submit "更新" %>
+<% end %>
