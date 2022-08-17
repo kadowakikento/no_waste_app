@@ -4,7 +4,7 @@ class ShoppingListsController < ApplicationController
 
   # GET /shopping_lists
   def index
-    @shopping_lists = ShoppingList.all
+    @shopping_lists = current_user.shopping_lists.all
   end
 
   # GET /shopping_lists/1
