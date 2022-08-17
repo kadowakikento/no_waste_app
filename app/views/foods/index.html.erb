@@ -25,3 +25,11 @@
 <br>
 
 <%= link_to 'New Food', new_food_path %>
+<%= month_calendar(attribute: :due_time, events: @foods) do |date, foods| %>
+  <%= date.day %>
+  <% foods.each do |food| %>
+    <div>
+      <%= food.name %>
+    </div>
+  <% end %>
+<% end %>
