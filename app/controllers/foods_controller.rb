@@ -66,7 +66,7 @@ class FoodsController < ApplicationController
   private
 
   def set_q
-    @q = User.ransack(params[:q])
+    @q = Food.ransack(params[:q])
   end
     # Use callbacks to share common setup or constraints between actions.
   def set_food
