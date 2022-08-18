@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # get 'users/show'
-  resources :shopping_lists
+  resources :shopping_lists do
+    resources :comments
+  end
   resources :foods do
     collection do
       get 'search'
