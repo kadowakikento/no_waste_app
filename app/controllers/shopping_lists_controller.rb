@@ -9,6 +9,8 @@ class ShoppingListsController < ApplicationController
 
   # GET /shopping_lists/1
   def show
+    @comments = @shopping_list.comments
+    @comment = @shopping_list.comments.build
   end
 
   # GET /shopping_lists/new
