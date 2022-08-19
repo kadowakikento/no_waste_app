@@ -1,7 +1,13 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :ensure_normal_user, only: %i[destroy]
+  before_action :ensure_normal_user, only: %i[update destroy]
+
+  def ensure_normal_user
+    if resource.email == 'guest@example.com'
+      redirect_to root_path, alert: 'ゲストユーザーの更新・削除はできません。'
+    end
+  end
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -16,14 +22,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+  end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    if @user.update(user_params)
+      redirect_to root_path, notice: "ユーザー情報を編集しました！"
+    else
+      render :edit, notice: "更新に失敗しました！"
+    end
+  end
 
   # DELETE /resource
   # def destroy
