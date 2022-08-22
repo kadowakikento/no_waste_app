@@ -27,7 +27,7 @@ class FoodsController < ApplicationController
 
     respond_to do |format|
       if @food.save
-        format.html { redirect_to food_url(@food), notice: "Food was successfully created." }
+        format.html { redirect_to food_url(@food), notice: "#{@food.name}を追加しました" }
         format.json { render :show, status: :created, location: @food }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class FoodsController < ApplicationController
   def update
     respond_to do |format|
       if @food.update(food_params)
-        format.html { redirect_to food_url(@food), notice: "Food was successfully updated." }
+        format.html { redirect_to food_url(@food), notice: "#{@food.name}の情報を更新しました" }
         format.json { render :show, status: :ok, location: @food }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +54,7 @@ class FoodsController < ApplicationController
     @food.destroy
 
     respond_to do |format|
-      format.html { redirect_to foods_url, notice: "Food was successfully destroyed." }
+      format.html { redirect_to foods_url, notice: "#{@food.name}を削除しました" }
       format.json { head :no_content }
     end
   end

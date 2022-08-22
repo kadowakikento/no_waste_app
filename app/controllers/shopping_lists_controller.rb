@@ -27,7 +27,7 @@ class ShoppingListsController < ApplicationController
     @shopping_list = ShoppingList.new(shopping_list_params)
 
     if @shopping_list.save
-      redirect_to @shopping_list, notice: 'Shopping list was successfully created.'
+      redirect_to @shopping_list, notice: '買い物リストに追加しました'
     else
       render :new
     end
@@ -36,7 +36,7 @@ class ShoppingListsController < ApplicationController
   # PATCH/PUT /shopping_lists/1
   def update
     if @shopping_list.update(shopping_list_params)
-      redirect_to @shopping_list, notice: 'Shopping list was successfully updated.'
+      redirect_to @shopping_list, notice: '変更しました'
     else
       render :edit
     end
@@ -45,7 +45,7 @@ class ShoppingListsController < ApplicationController
   # DELETE /shopping_lists/1
   def destroy
     @shopping_list.destroy
-    redirect_to shopping_lists_url, notice: 'Shopping list was successfully destroyed.'
+    redirect_to shopping_lists_url, notice: '買い物リストから削除しました'
   end
 
   private
