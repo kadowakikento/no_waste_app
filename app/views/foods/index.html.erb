@@ -10,7 +10,7 @@
   <thead>
     <tr>
       <th>商品</th>
-      <th>期限</th>
+      <th><%= sort_link(@q, :due_time, "期限", hide_indicator: true )%></th>
       <th colspan="3"></th>
     </tr>
   </thead>

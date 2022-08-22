@@ -1,12 +1,12 @@
 <p>
-  <strong>Name:</strong>
+  <strong>商品名</strong>
   <%= @food.name %>
 </p>
 
 <p>
-  <strong>Due time:</strong>
+  <strong>期限</strong>
   <%= @food.due_time.strftime("%Y/%m/%d %H:%M") %>
 </p>
 
-<%= link_to 'Edit', edit_food_path(@food) %> |
-<%= link_to 'Back', foods_path %>
+<%= link_to '編集', edit_food_path(@food) %> |
+<%= link_to '戻る', foods_path %>
