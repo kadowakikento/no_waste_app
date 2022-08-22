@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :ensure_user, only: %i[ show edit update destroy ]
   def show
     @user = User.find(params[:id])
   end
@@ -17,6 +19,11 @@ class UsersController < ApplicationController
   end
   
   private
+
+  def ensure_user
+    @users = current_user.id
+    redirect_to articles_path if @user.id != @users
+  end
 
   def set_user
     @user = User.find(params[:id])
