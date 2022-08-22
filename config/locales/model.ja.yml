@@ -1,7 +1,9 @@
 ja:
   activerecord:
     models:
+      article: トップ
       food: 食べ物
+      comment: コメント
       user: ユーザー
       shopping_list: 買い物リスト
     attributes:

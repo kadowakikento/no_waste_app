@@ -1,10 +1,10 @@
 <p>
-  <strong>Title:</strong>
+  <strong>商品</strong>
   <%= @shopping_list.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>備考</strong>
   <%= @shopping_list.content %>
 </p>
 
@@ -17,6 +17,5 @@
   <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
   <%= render partial: 'comments/form', locals: { comment: @comment, shopping_list: @shopping_list } %>
 
-  <%= link_to '編集', edit_shopping_list_path(@shopping_list) %> |
   <%= link_to '戻る', shopping_lists_path %>
 </div>

@@ -28,7 +28,8 @@
 
   <br>
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label :プロフィール画像 %>
+    <br>
     <%= f.file_field :image %>
   </div>
   <br>
@@ -47,4 +48,4 @@
 
 <p> <%= button_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %></p>
 
-<%= link_to t('devise.shared.links.back'), :back %>
+<%= link_to 'トップページ', articles_path %>
