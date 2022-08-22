@@ -144,7 +144,7 @@ ja:
     submit:
       create: 追加
       submit: 保存する
-      update: 更新する
+      update: 更新
   number:
     currency:
       format:
