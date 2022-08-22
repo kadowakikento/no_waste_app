@@ -1,0 +1,12 @@
+<h1 class="text-center">レシピ検索</h1>
+  <%= form_tag(youtube_index_path, method: :get) do %>
+    <%= text_field_tag :search, "", placeholder:"🔍材料、レシピで検索" %>
+    <%= submit_tag '検索' %>
+  <% end %>
+
+  <% @youtube_data.items.each do |item| %>
+    <% snippet = item.snippet %>
+    <p><%= snippet.title %></p>
+    <p><%= snippet.published_at %><%= snippet.channel_title %></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <% end %>

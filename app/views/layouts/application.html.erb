@@ -15,6 +15,7 @@
     <%= link_to "買い物リスト",shopping_lists_path %>
 
     <% if user_signed_in? %>
+      <%= link_to "レシピ検索", youtube_index_path %>
       <%= link_to "マイページ", user_path(current_user) %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     <% else %>
