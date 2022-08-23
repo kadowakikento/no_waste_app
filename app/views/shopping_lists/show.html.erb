@@ -14,7 +14,6 @@
     <%= render partial: 'comments/index', locals: { comments: @comments, shopping_list: @shopping_list } %>
   </div>
 
-  <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
   <%= render partial: 'comments/form', locals: { comment: @comment, shopping_list: @shopping_list } %>
 
   <%= link_to '戻る', shopping_lists_path %>

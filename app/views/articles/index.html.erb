@@ -4,10 +4,14 @@
     でもうっかりこの食材忘れてた
     そんなことをなくすためのサイトです。
   </p>
-  <% if user_signed_in? %>
+    <% if user_signed_in? %>
       <%= link_to "冷蔵庫一覧", foods_path, class: "btn btn-outline-info rounded-pill" %>
+      <%= link_to "買い物リスト",shopping_lists_path %>
+      <%= link_to "レシピ検索", youtube_index_path %>
     <% else %>
+      <%= link_to "今すぐ始める", new_user_registration_path %>
       <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill' %>
+      <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %>
     <% end %>
     <h3>アプリ説明</h3>
       <p>
