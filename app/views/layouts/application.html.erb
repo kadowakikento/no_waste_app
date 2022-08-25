@@ -4,25 +4,25 @@
     <title>NoWaste</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= link_to "トップ", articles_path %>
-    <%= link_to "冷蔵庫一覧", foods_path %>
-    <%= link_to "買い物リスト",shopping_lists_path %>
+    <%= link_to "トップ", articles_path, class: 'btn btn-outline-info rounded-pill' %>
+    <%= link_to "冷蔵庫一覧", foods_path, class: 'btn btn-outline-info rounded-pill' %>
+    <%= link_to "買い物リスト",shopping_lists_path, class: 'btn btn-outline-info rounded-pill' %>
 
     <% if user_signed_in? %>
-      <%= link_to "レシピ検索", youtube_index_path %>
-      <%= link_to "マイページ", user_path(current_user) %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to "レシピ検索", youtube_index_path, class: 'btn btn-outline-info rounded-pill' %>
+      <%= link_to "マイページ", user_path(current_user), class: 'btn btn-outline-info rounded-pill' %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-outline-info rounded-pill' %>
     <% else %>
-      <%= link_to "新規登録", new_user_registration_path %>
-      <%= link_to "ログイン", new_user_session_path %>
-      <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %>
-      <%= link_to "ゲスト管理者ログイン", users_admin_guest_sign_in_path, method: :post %>
+      <%= link_to "アカウント登録", new_user_registration_path, class: 'btn btn-outline-info rounded-pill' %>
+      <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill' %>
+      <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: 'btn btn-outline-info rounded-pill' %>
+      <%= link_to "ゲスト管理者ログイン", users_admin_guest_sign_in_path, method: :post, class: 'btn btn-outline-info rounded-pill' %>
     <% end %>
 
     <% if current_user.try(:admin?) %>
