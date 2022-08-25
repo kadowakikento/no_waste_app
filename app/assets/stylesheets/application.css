@@ -17,3 +17,16 @@
 a {
   text-decoration: none !important;
 }
+
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+footer {
+  margin-top: auto;
+  background-color: #326b76;
+  text-align: center;
+  color: #fff;
+}
