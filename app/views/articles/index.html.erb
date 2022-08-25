@@ -1,20 +1,28 @@
-<h2>No Waste</h2>
-<p>
-    毎日開けてる冷蔵庫
-    でもうっかりこの食材忘れてた
-    そんなことをなくすためのサイトです。
-  </p>
+<div class="main-container" >
+  <h2>
+    この食材を忘れてたということを
+    防ぐためのアプリです。
+  </h2>
+  <div class="btn-container">
     <% if user_signed_in? %>
-      <%= link_to "冷蔵庫一覧", foods_path, class: "btn btn-outline-info rounded-pill" %>
-      <%= link_to "買い物リスト",shopping_lists_path %>
-      <%= link_to "レシピ検索", youtube_index_path %>
+      <button type="button" class="text-white"><%= link_to "冷蔵庫一覧", foods_path %></button>
+      <button type="button" class="text-white"><%= link_to "買い物リスト",shopping_lists_path %></button>
+      <button type="button" class="text-white"><%= link_to "レシピ検索", youtube_index_path %></button>
     <% else %>
-      <%= link_to "今すぐ始める", new_user_registration_path %>
-      <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill' %>
-      <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %>
+      <button type="button" class="text-white"><%= link_to "今すぐ始める", new_user_registration_path %></button>
+      <button type="button" class="text-white"><%= link_to "ログイン", new_user_session_path %></button>
+      <button type="button" class="text-white"><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %></button>
     <% end %>
-    <h3>アプリ説明</h3>
-      <p>
-        冷蔵庫の今ある食材の中身を<br>
-        確認、管理できるサービスです。
-      </p>
+  </div>
+    
+  <h3>
+    ①冷蔵庫一覧・・・買った商品や期限を記録しておくことができます
+    <br>
+    <br>
+    ②買い物リスト・・・買いたい商品をメモにして残すことができます
+    <br>
+    <br>
+    ③レシピ検索・・・本サービスからレシピを検索しYouTube動画を視聴できます
+  </h3>
+</div>
+</div>
