@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder:"商品名" %>
   </div>
   <br>
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= form.text_field :content, placeholder:"絶対買う"%>
   </div>
 
   <%= form.hidden_field :user_id, :value => current_user.id%>
