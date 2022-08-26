@@ -6,7 +6,7 @@ FactoryBot.define do
     association :user
   end
 
-  factory :second_shopping_list, class :ShoppingList do
+  factory :second_shopping_list, class: ShoppingList do
     title { '白米' }
     content { 'コシヒカリ' }
     user_id { 2 }
