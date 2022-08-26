@@ -1,9 +1,11 @@
-<h2><%= t('.title', resource: resource.model_name.human) %></h2>
+<div class="text-center"><%= link_to 'トップページ', articles_path, class: "btn btn-secondary"%>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="box2">
+  <h2 class="text-center"><%= t('.title', resource: resource.model_name.human) %></h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="box-email">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -12,7 +14,7 @@
     <div><%= t('.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email) %></div>
   <% end %>
 
-  <div class="field">
+  <div class="box-password">
     <%= f.label :パスワードの変更 %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
@@ -21,31 +23,31 @@
     <% end %>
   </div>
 
-  <div class="field">
+  <div class="box-password">
     <%= f.label :パスワードの変更（確認用） %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <br>
-  <div class="field">
-    <%= f.label :プロフィール画像 %>
-    <br>
-    <%= f.file_field :image %>
-  </div>
-  <br>
 
   <div class="field">
+    <%= f.label :プロフィール画像 %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="box-password">
     <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes') %>)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
-  <div class="actions">
+  <div class="box-login">
     <%= f.submit t('.update') %>
   </div>
 <% end %>
 
-<h3>アカウントを消す</h3>
+<h3 class="text-center">アカウントを消す</h3>
 
-<p> <%= button_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %></p>
+<div class="text-center"> <%= button_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %></p>
 
 <%= link_to 'トップページ', articles_path %>
+
+</div>
