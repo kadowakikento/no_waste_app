@@ -30,7 +30,7 @@
 </table>
 
 <br>
-<%= month_calendar(attribute: :due_time, events: @foods) do |date, foods| %>
+<div class="mb-5"><%= month_calendar(attribute: :due_time, events: @foods) do |date, foods| %>
   <%= date.day %>
   <% foods.each do |food| %>
     <div>
@@ -38,3 +38,4 @@
     </div>
   <% end %>
 <% end %>
+</div>

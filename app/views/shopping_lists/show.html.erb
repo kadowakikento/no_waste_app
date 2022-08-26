@@ -1,20 +1,21 @@
-<p>
+<p class="text-center">
   <strong>商品</strong>
   <%= @shopping_list.title %>
 </p>
 
-<p>
+<p class="text-center">
   <strong>備考</strong>
   <%= @shopping_list.content %>
 </p>
+<p class="text-center">買うお店</p>
 
-<p>コメント一覧</p>
-
-  <div id="comments_area">
-    <%= render partial: 'comments/index', locals: { comments: @comments, shopping_list: @shopping_list } %>
-  </div>
-
+<div id="comments_area">
+  <%= render partial: 'comments/index', locals: { comments: @comments, shopping_list: @shopping_list } %>
+</div>
+<div class="text-center">
   <%= render partial: 'comments/form', locals: { comment: @comment, shopping_list: @shopping_list } %>
-
-  <%= link_to '戻る', shopping_lists_path %>
+</div>
+<br>
+<div class="text-center">
+  <%= link_to '戻る', shopping_lists_path, class: "btn btn-secondary" %>
 </div>

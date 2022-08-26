@@ -1,5 +1,9 @@
-<h1>リスト追加</h1>
-
-<%= render 'form', shopping_list: @shopping_list %>
-
-<%= link_to '戻る', shopping_lists_path %>
+<h1 class="text-center">リスト追加</h1>
+<br>
+<div>
+  <div class="text-center"><%= render 'form', shopping_list: @shopping_list %>
+</div>
+<br>
+<div class="text-center">
+  <%= link_to '戻る', shopping_lists_path, class: "btn btn-secondary" %>
+</div>

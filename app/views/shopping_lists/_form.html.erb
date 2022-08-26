@@ -1,11 +1,11 @@
 <%= form_with(model: shopping_list, local: true) do |form| %>
   <% if shopping_list.errors.any? %>
     <div id="error_explanation">
-      <h2><%= shopping_list.errors.count %> 件のエラーが発生しました</h2>
+      <h2 class="alert alert-danger"><%= shopping_list.errors.count %> 件のエラーが発生しました</h2>
 
       <ul>
         <% shopping_list.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <%= message %>
         <% end %>
       </ul>
     </div>

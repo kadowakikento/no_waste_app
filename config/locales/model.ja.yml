@@ -8,7 +8,7 @@ ja:
       shopping_list: 買い物リスト
     attributes:
       food:
-        name: 商品名
+        name: 商品
         due_time: 期限
       shopping_list:
         title: 商品
