@@ -11,36 +11,40 @@
   </head>
 
   <body>
-    <%= link_to "トップ", articles_path, class: 'btn btn-outline-info rounded-pill' %>
-    <%= link_to "冷蔵庫一覧", foods_path, class: 'btn btn-outline-info rounded-pill' %>
-    <%= link_to "買い物リスト",shopping_lists_path, class: 'btn btn-outline-info rounded-pill' %>
+      <header>
+      <%= link_to "トップ", articles_path, class: 'btn btn-outline-info rounded-pill' %>
+      <%= link_to "冷蔵庫一覧", foods_path, class: 'btn btn-outline-info rounded-pill' %>
+      <%= link_to "買い物リスト",shopping_lists_path, class: 'btn btn-outline-info rounded-pill' %>
 
-    <% if user_signed_in? %>
-      <%= link_to "レシピ検索", youtube_index_path, class: 'btn btn-outline-info rounded-pill' %>
-      <%= link_to "マイページ", user_path(current_user), class: 'btn btn-outline-info rounded-pill' %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-outline-info rounded-pill' %>
-    <% else %>
-      <%= link_to "アカウント登録", new_user_registration_path, class: 'btn btn-outline-info rounded-pill' %>
-      <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill' %>
-      <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: 'btn btn-outline-info rounded-pill' %>
-      <%= link_to "ゲスト管理者ログイン", users_admin_guest_sign_in_path, method: :post, class: 'btn btn-outline-info rounded-pill' %>
-    <% end %>
+      <% if user_signed_in? %>
+        <%= link_to "レシピ検索", youtube_index_path, class: 'btn btn-outline-info rounded-pill' %>
+        <%= link_to "マイページ", user_path(current_user), class: 'btn btn-outline-info rounded-pill' %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-outline-info rounded-pill' %>
+      <% else %>
+        <%= link_to "今すぐはじめる", new_user_registration_path, class: 'btn btn-outline-info rounded-pill' %>
+        <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill' %>
+        <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: 'btn btn-outline-info rounded-pill' %>
+        <%= link_to "ゲスト管理者ログイン", users_admin_guest_sign_in_path, method: :post, class: 'btn btn-outline-info rounded-pill' %>
+      <% end %>
 
-    <% if current_user.try(:admin?) %>
-      <%= link_to '管理者画面', rails_admin_path, class: 'btn btn-outline-info rounded-pill' %>
-    <% end %>
-
-    <hr>
-
+      <% if current_user.try(:admin?) %>
+        <%= link_to '管理者画面', rails_admin_path, class: 'btn btn-outline-info rounded-pill' %>
+      <% end %>
+      <hr>
+    </header>
     <% if notice %>
-      <p class="alert alert-notice"><%= notice %></p>
+      <p class="text-center alert alert-notice"><%= notice %></p>
     <% end %>
     <% if alert %>
-      <p class="alert alert-error"><%= alert %></p>
+      <p class="text-center alert alert-error"><%= alert %></p>
     <% end %>
     <%= yield %>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
+    <footer>
+      <p>©️ 2022 Kento Kadowaki</p>
+    </footer>
+  </div>
 </html>

@@ -1,9 +1,9 @@
-<h1>検索結果</h1>
-<table>
-  <thead>
+<h1 class="text-center">検索結果</h1>
+<table class="table table-hover table-bordered">
+  <thead class="table-info">
     <tr>
-      <th>商品名</th>
-      <th><%= sort_link(@q, :due_time, "期限", hide_indicator: true )%></th>
+      <th><div class="text-center">商品</div></th>
+      <th><div class="text-center"><%= sort_link(@q, :due_time, "期限", hide_indicator: true )%></div></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -11,12 +11,14 @@
   <tbody>
     <% @results.each do |food| %>
       <tr>
-        <td><%= food.name %></td>
-        <td><%= food.due_time.strftime("%Y/%m/%d %H:%M") %></td>
-        <td><%= link_to '編集', edit_food_path(food) %></td>
-        <td><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+        <td><div class="text-center"><%= food.name %></div></td>
+        <td><div class="text-center"><%= food.due_time.strftime("%Y/%m/%d %H:%M") %></div></td>
+        <td><div class="text-center"><%= link_to '編集', edit_food_path(food), class: "btn btn-success" %></div></td>
+        <td><div class="text-center"><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn btn-danger" %></div></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to '戻る', foods_path %>
+<div class="text-center">
+  <%= link_to '戻る', foods_path, class: "btn btn-secondary" %>
+</div>

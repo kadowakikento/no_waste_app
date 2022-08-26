@@ -1,11 +1,12 @@
 <%= form_with(model: food, local: true) do |form| %>
   <% if food.errors.any? %>
     <div id="error_explanation">
-      <h2><%= food.errors.count %> 件のエラーが発生しました</h2>
-
+      <h2 class="alert alert-danger"><%= food.errors.count %> 件のエラーが発生しました</h2>
       <ul>
         <% food.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <div class="text-center">
+            <%= message %>
+          </div>
         <% end %>
       </ul>
     </div>
@@ -13,7 +14,7 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, placeholder:"商品名" %>
   </div>
   <br>
   <div class="field">

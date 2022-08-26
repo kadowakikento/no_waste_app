@@ -1,7 +1,6 @@
 <div class="main-container" >
   <h2>
-    この食材を忘れてたということを
-    防ぐためのアプリです。
+    うっかり賞味期限を忘れ、食べ物を捨ててしまったことはありませんか？
   </h2>
   <div class="btn-container">
     <% if user_signed_in? %>
@@ -9,7 +8,7 @@
       <button type="button" class="text-white"><%= link_to "買い物リスト",shopping_lists_path %></button>
       <button type="button" class="text-white"><%= link_to "レシピ検索", youtube_index_path %></button>
     <% else %>
-      <button type="button" class="text-white"><%= link_to "今すぐ始める", new_user_registration_path %></button>
+      <button type="button" class="text-white"><%= link_to "今すぐはじめる", new_user_registration_path %></button>
       <button type="button" class="text-white"><%= link_to "ログイン", new_user_session_path %></button>
       <button type="button" class="text-white"><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %></button>
     <% end %>
