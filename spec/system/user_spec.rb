@@ -1,5 +1,5 @@
 require 'rails_helper'
-RSpec.describe 'ユーザ登録、セッション機能、管理画面のテスト', type: :system do
+RSpec.describe 'ユーザ登録、セッション機能のテスト', type: :system do
   let!(:user) { FactoryBot.create(:user) }
   describe 'ユーザー機能' do
     context 'ユーザーを新規作成した場合' do
