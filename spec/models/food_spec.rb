@@ -1,7 +1,6 @@
 require 'rails_helper'
 describe 'フードモデル機能', type: :model do
   let!(:user) { FactoryBot.create(:user) }
-  # let!(:food) { FactoryBot.create(:food) }
   describe 'バリデーションのテスト' do
     context '商品名が未記入の場合' do
       it 'バリデーションにひっかかる' do
