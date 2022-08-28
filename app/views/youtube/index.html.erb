@@ -5,7 +5,8 @@
     <%= submit_tag '検索' %>
   <% end %>
 </div>
-
+<br>
+<% if @check.present? %>
 <div class="container">
   <div class="row">
     <% @youtube_data.items.each do |item| %>
@@ -27,3 +28,4 @@
     <% end %>
   </div>
 </div>
+<% end %>

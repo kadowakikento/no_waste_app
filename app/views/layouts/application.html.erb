@@ -11,7 +11,7 @@
   </head>
 
   <body>
-      <nav>
+      <nav class="navbar sticky-top navbar-light bg-light">
       <%= link_to "トップ", articles_path, class: 'btn btn-outline-info rounded-pill' %>
       <%= link_to "冷蔵庫一覧", foods_path, class: 'btn btn-outline-info rounded-pill' %>
       <%= link_to "買い物リスト",shopping_lists_path, class: 'btn btn-outline-info rounded-pill' %>
@@ -26,6 +26,7 @@
         <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: 'btn btn-outline-info rounded-pill' %>
         <%= link_to "ゲスト管理者ログイン", users_admin_guest_sign_in_path, method: :post, class: 'btn btn-outline-info rounded-pill' %>
       <% end %>
+    </nav>
 
       <% if current_user.try(:admin?) %>
         <%= link_to '管理者画面', rails_admin_path, class: 'btn btn-outline-info rounded-pill' %>

@@ -5,7 +5,7 @@
       <h2><%= t('.sign_up') %></h2>
       <div class="box-email">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'メールアドレスを入力' %>
   </div>
 
   <div class="box-password">
@@ -13,12 +13,12 @@
     <% if @minimum_password_length %>
     <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: '任意のパスワードを入力' %>
   </div>
 
   <div class="box-password">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'パスワードを再入力' %>
   </div>
 
   <div class="box-login">
