@@ -22,5 +22,6 @@ class YoutubeController < ApplicationController
 
   def index
     @youtube_data = find_videos(@keyword)
+    @check = params[:search]
   end
 end
