@@ -7,9 +7,27 @@ ja:
       user: ユーザー
       shopping_list: 買い物リスト
     attributes:
+      comment:
+        shopping_list: 買い物リスト
+        content: 内容
+        created_at: 作成日
+        updated_at: 更新日
+      article:
+        content: 内容
+        title: タイトル
+        created_at: 作成日
+        updated_at: 更新日
       food:
         name: 商品
         due_time: 期限
+        user: ユーザー
+        created_at: 作成日
+        updated_at: 更新日
+        comments: コメント
       shopping_list:
         title: 商品
         content: 備考
+        user: ユーザー
+        created_at: 作成日
+        updated_at: 更新日
+        comments: コメント
