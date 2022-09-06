@@ -13,6 +13,7 @@
       <tr>
         <td><div class="text-center"><%= food.name %></div></td>
         <td><div class="text-center"><%= food.due_time.strftime("%Y/%m/%d %H:%M") %></div></td>
+        <td>期限が切れるまで残り<%= (food.due_time.end_of_day - Time.zone.now).to_i / 1.day %>日</td>
         <td><div class="text-center"><%= link_to '編集', edit_food_path(food), class: "btn btn-success" %></div></td>
         <td><div class="text-center"><%= link_to '削除', food, method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn btn-danger" %></div></td>
       </tr>
